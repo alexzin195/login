@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo</title>
+    <link rel="stylesheet" href="bem-vindo.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2 id="mensagem" class="fade-in">Carregando...</h2>
+        <button class="logout-btn" onclick="logout()">Ir ao Login</button>
+    </div>
+
+    <script>
+        const usuarioEmail = localStorage.getItem("usuarioEmail");
+
+        if (usuarioEmail) {
+            document.getElementById("mensagem").innerText = `Bem-vindo, ${usuarioEmail}!`;
+        } else {
+            document.getElementById("mensagem").innerText = "Bem-vindo!";
+        }
+
+        function logout() {
+            localStorage.removeItem("usuarioEmail");
+            window.location.href = "cadastro.html";
+        }
+    </script>
+
+</body>
+</html>

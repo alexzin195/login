@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #01d6dd, #c8ff00);
+}
+
+.container {
+    text-align: center;
+    background: linear-gradient(135deg, #2ddb44, #94f129);
+    padding: 150px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    height: 90%;
+}
+
+h2 {
+    color: rgb(119, 18, 214);
+    font-size: 100px;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fade 1s ease-in forwards;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.logout-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(231, 189, 3);
+    color: rgb(30, 220, 226);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #8a0883;
+}
